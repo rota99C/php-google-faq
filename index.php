@@ -1,5 +1,7 @@
 <?php
 
+//sintassi ciclo forEach 
+
 $VociMenu = ['Introduzione', 'Norme sulla privacy', 'Termini di servizio', 'Tecnologie','Domande frequenti'];
 $Faqs = [
     'Come state implementando la recente decisione della Corte di giustizia dell\'Unione europea (CGUE) relativa al diritto all\'oblio?'=> [
@@ -38,4 +40,38 @@ $Faqs = [
 $VociFooter = ["Google","Tutto su Google","PrivacyTermini"];
 ?>
 
-ht
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>faq Google</title>
+</head>
+<body>
+<header>
+    <div><?php for ($i=0; $i < count($VociMenu); $i++) { ?> 
+        <p><?php echo $VociMenu[$i]; ?></p>
+    <?php } ?></div>
+    <div></div>
+
+</header>
+<main>
+    <?php foreach($Faqs as $key =>$value){ ?>
+        <h1><?php echo $key; ?></h1>
+        <div>
+            <?php foreach($value as $key) { ?>
+                <p>
+                    <?php echo $key; ?>
+                </p>
+                        
+            <?php } ?>
+        </div>
+        
+    
+
+        <?php } ?>
+</main>
+    
+</body>
+</html>
