@@ -37,7 +37,8 @@ $Faqs = [
         "In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di URL referrer. Talvolta, l'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell'URL negli URL referrer. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili qui. Le query di ricerca o le informazioni contenute nell'URL referrer potrebbero essere disponibili mediante Google Analytics o un'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all' esatte parole chiave che hanno determinato il clic su un annuncio."
     ]
     ];
-$VociFooter = ["Google","Tutto su Google","PrivacyTermini"];
+$VociFooter = ["Google","Tutto su Google","Privacy","Termini"];
+$Languages = ["Italiano", "English", "Français","Deutsch","Hrvatski","Íslenska"]
 ?>
 
 <!DOCTYPE html>
@@ -58,8 +59,8 @@ $VociFooter = ["Google","Tutto su Google","PrivacyTermini"];
             <h4 class="ms-2 text-secondary fst-normal">Privacy e termini</h4>
         </div>
         <div class="col-6 h-100 d-flex justify-content-end p-3 align-items-center">
-            <div class="container_dots position-relative"> 
-              <img class="h-100 position-absolute top-50 start-50 translate-middle" src="./asset/dots.png" alt="">
+            <div class="container_dots position-relative rounded-circle"> 
+              <img class="position-absolute top-50 start-50 translate-middle" src="./asset/dots.png" alt="">
             </div>
             <div class="container_profile ms-4">
                <img class="h-100 rounded-circle" src="./asset/Foto_user.JPG" alt="Foto_profilo"> 
@@ -68,12 +69,12 @@ $VociFooter = ["Google","Tutto su Google","PrivacyTermini"];
         </div>
     </div>
     <div class="navbar-menu d-flex ps-3 "><?php for ($i=0; $i < count($VociMenu); $i++) { ?> 
-        <p class="me-5 p-0 fst-normal"><?php echo $VociMenu[$i]; ?></p>
+        <p class="me-5 pb-2 fst-normal"><?php echo $VociMenu[$i]; ?></p>
     <?php } ?></div>
    <hr> 
 </header>
 
-<main class="col-6 m-auto">
+<main class="col-6 m-auto pb-4">
     <?php foreach($Faqs as $key =>$value){ ?>
         <h4><?php echo $key; ?></h4>
         <div>
@@ -89,6 +90,29 @@ $VociFooter = ["Google","Tutto su Google","PrivacyTermini"];
 
         <?php } ?>
 </main>
+<footer>
+    <div class="col-6 h-100 m-auto d-flex justify-content-between align-items-center">
+    
+        <ul>
+           <?php for ($i=0; $i < count($VociFooter); $i++) { ?>
+        <li class="d-inline"><?php echo $VociFooter[$i];?></li>
+        
+        <?php } ?> 
+        </ul>
+    <div>
+      <label for="language">
+          <img src="./asset/language-icon.png" alt="">
+      </label>  
+      <select name="languages" id="languages">
+            <?php for ($i=0; $i <count($Languages) ; $i++) { ?>
+                <option value=""><?php echo $Languages[$i]; ?></option>
+           <?php } ?>
+
+      </select>
+    </div>
+    </div>
+
+</footer>
     
 </body>
 </html>

@@ -6,7 +6,8 @@
 
 header {
   width: 100%;
-  position: fixed;
+  position: sticky;
+  /*     codingcreativo.it/position-sticky/      */
   top: 0;
   left: 0;
   z-index: 1;
@@ -17,8 +18,17 @@ header {
 }
 
 .container_dots {
-  height: 20px;
+  height: 32px;
+  width: 32px;
+}
+
+.container_dots img {
   width: 20px;
+  height: 20px;
+}
+
+.container_dots:hover {
+  background-color: lightgray;
 }
 
 .container_profile {
@@ -28,6 +38,13 @@ header {
 
 .navbar-menu p {
   margin-bottom: 0 !important;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.navbar-menu p:last-of-type {
+  color: blue;
+  border-bottom: 2px solid blue;
 }
 
 main h4 {
@@ -38,5 +55,29 @@ main p {
 }
 
 hr {
+  margin: 0 !important;
+}
+
+footer {
+  background-color: lightgray;
+  height: 34px;
+  width: 100%;
+  padding: 10px;
+}
+
+footer ul {
   margin-bottom: 0 !important;
+  padding-left: 0 !important;
+  font-size: 11px;
+}
+
+footer ul li:not(:last-of-type):after {
+  content: "\0000b7";
+  /* https://unicode-table.com/it/00B7/ */
+  padding: 0 5px;
+}
+
+footer select {
+  width: 180px;
+  font-size: 14px;
 }
