@@ -46,19 +46,36 @@ $VociFooter = ["Google","Tutto su Google","PrivacyTermini"];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>faq Google</title>
 </head>
 <body>
-<header>
-    <div><?php for ($i=0; $i < count($VociMenu); $i++) { ?> 
-        <p><?php echo $VociMenu[$i]; ?></p>
+<header class="bg-white">
+    <div class="container_logo_user w-100 d-flex justify-content-between">
+        <div class="col-6 h-100 p-3 d-flex align-items-center">
+            <img class="h-100"src="./asset/Google_logo_(2010-2013).svg.png" alt="Logo_Google">
+            <h4 class="ms-2 text-secondary fst-normal">Privacy e termini</h4>
+        </div>
+        <div class="col-6 h-100 d-flex justify-content-end p-3 align-items-center">
+            <div class="container_dots position-relative"> 
+              <img class="h-100 position-absolute top-50 start-50 translate-middle" src="./asset/dots.png" alt="">
+            </div>
+            <div class="container_profile ms-4">
+               <img class="h-100 rounded-circle" src="./asset/Foto_user.JPG" alt="Foto_profilo"> 
+            </div>
+            
+        </div>
+    </div>
+    <div class="navbar-menu d-flex ps-3 "><?php for ($i=0; $i < count($VociMenu); $i++) { ?> 
+        <p class="me-5 p-0 fst-normal"><?php echo $VociMenu[$i]; ?></p>
     <?php } ?></div>
-    <div></div>
-
+   <hr> 
 </header>
-<main>
+
+<main class="col-6 m-auto">
     <?php foreach($Faqs as $key =>$value){ ?>
-        <h1><?php echo $key; ?></h1>
+        <h4><?php echo $key; ?></h4>
         <div>
             <?php foreach($value as $key) { ?>
                 <p>

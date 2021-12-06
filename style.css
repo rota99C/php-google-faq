@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.container_logo_user {
+  height: 60px;
+}
+
+.container_dots {
+  height: 20px;
+  width: 20px;
+}
+
+.container_profile {
+  height: 32px;
+  width: 32px;
+}
+
+.navbar-menu p {
+  margin-bottom: 0 !important;
+}
+
+main h4 {
+  margin-top: 100px !important;
+}
+main p {
+  font-size: 14px;
+}
+
+hr {
+  margin-bottom: 0 !important;
+}
